@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" href="img/rm.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full top-0 left-0 z-50 bg-gray-800 bg-opacity-70 backdrop-blur-lg shadow-md"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8"
+      >
+        <h1 class="text-xl sm:text-2xl font-bold text-white">ro_maricc</h1>
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="#home" class="hover:text-blue-400 transition nav-link"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="hover:text-blue-400 transition nav-link"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-blue-400 transition nav-link"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-blue-400 transition nav-link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-white focus:outline-none font-bold"
+        ></button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-800 text-center py-4"
+      >
+        <a href="#home" class="block py-2 hover:text-blue-400 nav-link">Home</a>
+        <a href="#about" class="block py-2 hover:text-blue-400 nav-link"
+          >About</a
+        >
+        <a href="#projects" class="block py-2 hover:text-blue-400 nav-link"
+          >Projects</a
+        >
+        <a href="#contact" class="block py-2 hover:text-blue-400 nav-link"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="h-screen flex flex-col justify-center items-center text-center px-4"
+    >
+      <h2
+        class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4"
+        id="hero-title"
+      >
+        Hello, I am <span class="text-blue-400">Romaric</span>
+      </h2>
+      <p
+        class="text-base sm:text-lg md:text-xl text-gray-300 mb-3"
+        id="hero-subtitle"
+      >
+        A Software Developer
+      </p>
+      <!-- Social Icons -->
+      <div class="flex gap-5 mb-10">
+        <!-- GitHub -->
+        <span id="GitHub" class="icons">
+          <a href="https://www.GitHub.com/fritas-coder"> </a>
+        </span>
+        <!-- X (Twitter) -->
+        <span id="X" class="icons">
+          <a href="https://www.x.com/FritasSodji"> </a>
+        </span>
+        <!-- Instagram -->
+        <span id="Instagram" class="icons">
+          <a href="https://www.instagram.com/ro_maricc"> </a>
+        </span>
+        <!-- LinkedIn -->
+        <span id="LinkedIn" class="icons">
+          <a href="https://www.linkedin.com/in/romaric-sodji-89539726a"> </a>
+        </span>
+      </div>
+      <a
+        href="#projects"
+        class="bg-blue-500 hover:bg-blue-600 px-5 sm:px-6 py-3 rounded-lg transition transform hover:scale-105 text-sm sm:text-base"
+        id="hero-btn"
+      >
+        View My Work
+      </a>
+    </section>
+
+    <!-- About -->
+    <section
+      id="about"
+      class="py-16 sm:py-20 container mx-auto px-6 lg:px-10 flex flex-col-reverse lg:flex-row items-center gap-10"
+    >
+      <!-- Image -->
+      <div class="flex-shrink-0 relative">
+        <img
+          src="img/rom.jpg"
+          alt="Romaric"
+          class="h-80 w-80 rounded-3xl object-cover"
+        />
+
+        <div
+          class="h-80 w-80 absolute top-0 backdrop-blur-lg bg-gray-900 hidden"
+          id="skills"
+        >
+          <div class="block pb-3 items-center pt-1.5">
+            <p class="font-bold text-blue-700 pl-2">HTML & CSS</p>
+            <div
+              class="w-80 h-4 rounded-full overflow-hidden bg-gray-400 items-center flex"
+            >
+              <span class="bg-green-500 text-xs h-4 w-72 text-center">
+                90%
+              </span>
+            </div>
+          </div>
+          <div class="block pb-3 items-center">
+            <p class="font-bold text-blue-700 pl-2">React.js</p>
+            <div
+              class="w-80 h-4 rounded-full overflow-hidden bg-gray-400 items-center flex"
+            >
+              <span class="bg-blue-500 text-xs h-4 w-60 text-center">
+                70%
+              </span>
+            </div>
+          </div>
+          <div class="block pb-3 items-center">
+            <p class="font-bold text-blue-700 pl-2">JavaScript</p>
+            <div
+              class="w-80 h-4 rounded-full overflow-hidden bg-gray-400 items-center flex"
+            >
+              <span class="bg-red-500 text-xs h-4 w-56 text-center"> 65% </span>
+            </div>
+          </div>
+          <div class="block pb-3 items-center">
+            <p class="font-bold text-blue-700 pl-2">Tailwind CSS</p>
+            <div
+              class="w-80 h-4 rounded-full overflow-hidden bg-gray-400 items-center flex"
+            >
+              <span class="bg-gray-700 text-xs h-4 w-52 text-center">
+                55%
+              </span>
+            </div>
+          </div>
+          <div class="block pb-3 items-center">
+            <p class="font-bold text-blue-700 pl-2">Node.js</p>
+            <div
+              class="w-80 h-4 rounded-full overflow-hidden bg-gray-400 items-center flex"
+            >
+              <span class="bg-yellow-500 text-xs h-4 w-40 text-center">
+                50%
+              </span>
+            </div>
+          </div>
+          <div class="block pb-3 items-center">
+            <p class="font-bold text-blue-700 pl-2">Next.js</p>
+            <div
+              class="w-80 h-4 rounded-full overflow-hidden bg-gray-400 items-center flex"
+            >
+              <span class="bg-orange-500 text-xs h-4 w-36 text-center">
+                45%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Content -->
+      <div class="text-center lg:text-left">
+        <h3 class="text-4xl sm:text-4xl font-bold mb-6">About Me</h3>
+        <p class="max-w-2xl text-gray-300 text-sm sm:text-base md:text-lg mb-6">
+          I am a passionate junior software developer who loves creating clean,
+          responsive, and user-friendly web applications. I specialize in
+          JavaScript, React.js, Node.js, and Express.js, focusing on writing
+          efficient code and delivering seamless digital experiences. Always
+          eager to learn, I explore new technologies to improve my skills and
+          solve real-world problems. Adaptable and determined, I embrace
+          challenges and continuously grow as a developer, aiming to make a
+          meaningful impact in the tech world.
+        </p>
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg transition"
+          id="show-skills"
+          onclick="onClick()"
+        >
+          Show Skills
+        </button>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="py-20 sm:px-2" id="projects">
+      <h1 class="text-center text-4xl font-bold mb-6">
+        Latest <span class="text-blue-400">Project</span>
+      </h1>
+
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+        <!-- Card 1: FreshMart -->
+        <div
+          class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-green-400"
+        >
+          <img
+            src="img/fresh.png"
+            alt="FreshMart"
+            class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-gray-800 to-blue-500 bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+            <div
+              class="text-white px-4 flex flex-col justify-center items-center"
+            >
+              <h2 class="text-4xl font-bold pb-5">FreshMart</h2>
+              <p class="text-sm text-center">
+                FreshMart is an online grocery platform for fast, convenient
+                shopping and delivery of fresh essentials.
+              </p>
+              <a href="#">
+                <span
+                  class="my-7 w-10 h-10 bg-gray-100 flex justify-center items-center rounded-3xl hover:bg-blue-500 transform transition duration-300"
+                  id="link"
+                ></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="md:hidden absolute bottom-0 bg-gray-400 text-gray-700 text-sm w-full h-7 flex justify-center items-center text-[10px]"
+          >
+            <a href="#" class="text-[11px] font-bold underline text-blue-600 p-1"
+              >FreshMart:
+            </a>
+            online grocery platform for fast, convenient shopping and delivery
+            of fresh essentials.
+          </div>
+        </div>
+
+        <!-- Card 2: Bigbab -->
+        <div
+          class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-yellow-600"
+        >
+          <img
+            src="img/bigbab.png"
+            alt="Bigbab"
+            class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-gray-800 to-blue-500 bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+            <div
+              class="text-white px-4 flex flex-col justify-center items-center"
+            >
+              <h2 class="text-4xl font-bold pb-5 uppercase">Bigbab</h2>
+              <p class="text-sm text-center">
+                BIGBABS LLC creates innovative web and e-commerce platforms with
+                seamless, user-friendly experiences.
+              </p>
+              <a href="https://www.bigbabs.com/" target="_blank">
+                <span
+                  class="my-6 w-10 h-10 bg-gray-100 flex justify-center items-center rounded-3xl hover:bg-blue-500 transform transition duration-300"
+                  id="link1"
+                ></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="md:hidden absolute bottom-0 bg-gray-400 text-gray-700 text-sm w-full h-7 flex justify-center items-center text-[11px]"
+          >
+            <a href="https://www.bigbabs.com/" class="font-bold underline text-blue-600 text-[9px] p-1 text-center"
+              >BIGBABS LLC:
+            </a>
+            creates innovative web and e-commerce platforms with seamless,
+            user-friendly experiences.
+          </div>
+          <div
+            class="bg-gray-400 text-gray-700 text-[11px] p-1.5 absolute top-0 m-3 rounded-4xl flex"
+          >
+            <svg
+              class="w-4"
+              fill="none"
+              stroke-width="1.5"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            Ongoing..
+          </div>
+        </div>
+
+        <!-- Card 3: Placeholder -->
+        <div
+          class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-amber-50"
+        >
+          <img
+            src="img/v.png"
+            alt="Sample"
+            class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-gray-800 to-blue-500 bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+            <div
+              class="text-white px-4 flex flex-col justify-center items-center"
+            >
+              <h2 class="text-4xl font-bold pb-5">FreshMart</h2>
+              <p class="text-lg text-center">
+                FreshMart browse, shop, and get your essentials delivered fast.
+              </p>
+              <a href="#">
+                <span
+                  class="my-7 w-10 h-10 bg-gray-100 flex justify-center items-center rounded-3xl hover:bg-blue-500 transform transition duration-300"
+                  id="link2"
+                ></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="md:hidden absolute bottom-0 bg-gray-400 text-gray-700 text-sm w-full h-7 flex justify-center items-center"
+          >
+            <a href="#" class="text-sm font-bold underline text-blue-600"
+              >FreshMart:
+            </a>
+            online grocery platform for fast, convenient shopping and delivery
+            of fresh essentials.
+          </div>
+        </div>
+
+        <!-- Card 4: TaskFlow -->
+        <div
+          class="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-amber-50"
+        >
+          <div class="relative">
+            <img
+              src="img/task.png"
+              alt="TaskFlow"
+              class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <img
+              src="img/taskm.jpg"
+              alt="TaskFlow mobile"
+              class="w-28 h-52 absolute top-10 right-5 shadow-lg"
+            />
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-gray-800 to-blue-500 bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          >
+            <div
+              class="text-white px-4 flex flex-col justify-center items-center"
+            >
+              <h2 class="text-4xl font-bold pb-5">TaskFlow</h2>
+              <p class="text-sm text-center">
+                a task manager that keeps work organized and priorities clear,
+                boosting productivity with ease.
+              </p>
+              <a href="https://taskflow-v78x.onrender.com" target="_blank">
+                <span
+                  class="my-7 w-10 h-10 bg-gray-100 flex justify-center items-center rounded-3xl hover:bg-blue-500 transform transition duration-300"
+                  id="link3"
+                ></span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="md:hidden absolute bottom-0 bg-gray-400 text-gray-700 text-sm w-full h-7 flex justify-center items-center text-[10px]"
+          >
+            <a href="https://taskflow-v78x.onrender.com" class="text-[10px] font-bold underline text-blue-600 p-1"
+              >TaskFlow:
+            </a>
+            TaskFlow is a task manager that keeps work organized and priorities
+            clear, boosting productivity with ease.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="py-16 sm:py-20 bg-gray-800 px-4 sm:px-6 lg:px-8"
+    >
+      <h3 class="text-3xl sm:text-4xl font-bold text-center mb-6">
+        Get in <span class="text-blue-400">Touch</span>
+      </h3>
+      <form
+        class="max-w-lg mx-auto space-y-4"
+        action="https://formspree.io/f/xpwlnrda"
+        method="POST"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          class="w-full p-2 sm:p-3 rounded bg-gray-700 border border-gray-600 text-white"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          class="w-full p-2 sm:p-3 rounded bg-gray-700 border border-gray-600 text-white"
+        />
+        <textarea
+          placeholder="Your Message"
+          name="Message"
+          class="w-full h-36 p-2 sm:p-3 rounded bg-gray-700 border border-gray-600 text-white"
+        ></textarea>
+        <button
+          class="w-full bg-blue-500 hover:bg-blue-600 py-2 sm:py-3 rounded text-sm sm:text-base"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
